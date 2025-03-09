@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  react-app:
+    image: node:latest
+    user: node
+    container_name: react_app
+    working_dir: /usr/src/app
+    ports:
+      - "5173:5173"
+    volumes:
+      - ${FE_APP_PATH}:/usr/src/app
+    command: [ "sh", "-c", "npm install --ignore-scripts && npm run start" ]
+    env_file:
+      - .env

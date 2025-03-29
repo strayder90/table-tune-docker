@@ -27,4 +27,8 @@ dev-dist
 # Coverage directory
 coverage/
 
+# Environment files
 .env
+
+# Ignore webroot directory
+webroot/
